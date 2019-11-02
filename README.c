@@ -66,11 +66,9 @@ int arithResult(int CreditNumArr[], int sum, int count)
     
     for (int i = count - 2; i >= 0; i -=2) 
     {   
-       // printf("\ni value: %d\n", i);
         productdigits[i] = CreditNumArr[i]*2;
         if (productdigits[i] >= 10)
         {   
-            //printf("\ndigit%d = %d\n", i, productdigits[i]);
             digitmod = productdigits[i] % 10;
             digitdiv = productdigits[i] / 10;
             sum += digitmod + digitdiv;
@@ -79,7 +77,6 @@ int arithResult(int CreditNumArr[], int sum, int count)
         else 
         {
              sum += productdigits[i];
-            // printf("\ndigit%d = %d\n", i, productdigits[i]);
         }
     }
     
